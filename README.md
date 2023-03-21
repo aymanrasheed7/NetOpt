@@ -6,8 +6,8 @@ outFile ARG1 ARG2 ARG3 OPTIONALARG4 OPTIONALARG5
 ## Argument examples
 <pre>
 ARG1: "E12" (using {1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2}), "ONE", "INT", "ODD"
-ARG2: "E", "PI", "PHI", "SQRT" (sqrt(n)), "SQRT2.5", "2.5", "-2.5" (2.5 with optional exclution)
-ARG3: "1", "2", ..., "12" (n = number of resistors)
+ARG2: "E", "PI", "PHI", "SQRT" (sqrt(nR)), "SQRT2.5", "2.5", "-2.5" (2.5 with optional exclution)
+ARG3: "1", "2", ..., "12" (nR = number of resistors)
 ARG4: "1", "2", ..., "12" (table size controller)
 ARG5: "1", "2", ..., "256" (number of threads)
 </pre>
