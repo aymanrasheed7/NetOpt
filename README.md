@@ -16,9 +16,17 @@ OPTIONALARG5: "1", "2", ..., "256" (number of threads to create)
 <pre>
 g++ .\NetOptThread.cpp; .\a.exe E12 SQRT 10
 </pre>
+Or
+<pre>
+g++ .\NetOptGPU.cpp; .\a.exe E12 SQRT 10
+</pre>
 ### Linux
 <pre>
 g++ -pthread NetOptThread.cpp; ./a.out E12 SQRT 10
+</pre>
+Or
+<pre>
+g++ -pthread -lopencl NetOptThread.cpp; ./a.out E12 SQRT 10
 </pre>
 ## Example output
 ### Windows
@@ -39,3 +47,7 @@ Cost: 5.057892e-09
 CPU time (s): 135.711018000
 Execution time (s): 8.269306404
 </pre>
+## About GPU
+Tested using OpenCL 3.0 CUDA driver on NVIDIA GeForce RTX 3050 Ti Laptop GPU in Windows.
+
+Did not work when using OpenCL 3.0 NEO driver on Intel(R) Iris(R) Xe Graphics in Windows.
