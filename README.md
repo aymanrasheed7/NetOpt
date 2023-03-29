@@ -18,7 +18,7 @@ g++ .\NetOptThread.cpp; .\a.exe E12 SQRT 10
 </pre>
 Or
 <pre>
-g++ .\NetOptGPU.cpp; .\a.exe E12 SQRT 10
+g++ -lopencl .\NetOptGPU.cpp; .\a.exe E12 SQRT 10
 </pre>
 ### Linux
 <pre>
@@ -26,7 +26,7 @@ g++ -pthread NetOptThread.cpp; ./a.out E12 SQRT 10
 </pre>
 Or
 <pre>
-g++ -pthread -lopencl NetOptThread.cpp; ./a.out E12 SQRT 10
+g++ -pthread -lopencl NetOptGPU.cpp; ./a.out E12 SQRT 10
 </pre>
 ## Example output
 ### Windows
@@ -48,6 +48,8 @@ CPU time (s): 135.711018000
 Execution time (s): 8.269306404
 </pre>
 ## About GPU
+Performance on GPU was worse than that on CPU. To run on GPU proper drivers are needed.
+
 Tested using OpenCL 3.0 CUDA driver on NVIDIA GeForce RTX 3050 Ti Laptop GPU in Windows.
 
 Did not work when using OpenCL 3.0 NEO driver on Intel(R) Iris(R) Xe Graphics in Windows.
